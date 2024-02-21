@@ -1,0 +1,93 @@
+:root{
+  --secundario:  #898ac0;
+  --primarioBrillante: #a11c55;
+  --primario: #68002d;
+  --primarioviolet: #d9b2c5;
+  --primarioOscuro: #7a1a43ad;
+  --blancore:#f6f6f6;
+  --blanco: #fff;
+  --gris: #808080;
+  --tercero:#C62626;
+  --fuenteprincipal: font-family: 'Lisu Bosa', serif;
+  --fuenteSecundaria:font-family: 'PT Sans', sans-serif; 
+  --fuenteSensual:font-family: 'Dancing Script', cursive; font-family: 'Dancing Script', cursive;
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+/* /globales/ */
+body{
+background-color:  var(--primario);
+font-size: 1.6rem;
+line-height: 1.5;
+margin: 0;
+ padding: 0;
+}
+.categoriass {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* Dos columnas de igual ancho */
+  justify-content: center; /* Centrar el grid horizontalmente */
+  gap: 10px; /* Espacio entre los elementos del grid */
+  padding: 20px;
+  max-width: 600px; /* Ancho máximo del contenedor */
+  margin: 0 auto; /* Centrar el contenedor */
+}
+
+.categoriass a {
+  display: block;
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #f2f2f2;
+  color: #333;
+  text-decoration: none;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  transition: background-color 0.3s, color 0.3s;
+}
+  
+  
+  @media (min-width:768px ){
+  .categoriass a:hover {
+    background-color: #ddd;
+    color: #000;
+        padding: 2rem;
+        column-gap: 1rem;
+        font-size: 5rem;
+  }
+  }
+
+/* Establece un contenedor para los productos como un grid de 3 columnas */
+.productos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Crea 3 columnas de igual tamaño */
+  gap: 20px; /* Espacio entre los elementos */
+}
+
+/* Estilo para cada producto en el grid */
+.producto {
+  border: 1px solid #ccc; /* Borde para cada producto */
+  padding: 20px; /* Espaciado interno */
+}
+
+/* Estilo para la imagen del producto (ajusta el tamaño si es necesario) */
+.imagen_contenido {
+  max-width: 50%; /* Ajusta la imagen al ancho del contenedor del producto */
+  height: auto; /* La altura se ajustará automáticamente para mantener la proporción */
+}
+a.button{
+  display: block;
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: var(--primarioviolet);
+  color: #333;
+  text-decoration: none;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  transition: background-color 0.3s, color 0.3s;
+  font-family: var(--fuenteprincipal);
+ 
+}

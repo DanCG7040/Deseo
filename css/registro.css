@@ -1,0 +1,68 @@
+:root{
+    --negro: #000;
+}
+
+/* Estilo del rectángulo que contiene el formulario */
+#registrarse {
+    border: 2px solid #000; /* Borde negro, puedes cambiar el color */
+    padding: 20px; /* Espaciado interno */
+    width: 500px; /* Ancho del rectángulo, ajústalo según necesites */
+    background-color: #fff; /* Color de fondo, aquí es blanco */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra opcional */
+    border-radius: 8px; /* Bordes redondeados, opcional */
+    margin: 0 auto;
+}
+
+h1 {
+    color: var(--negro);
+}
+
+/* Estilo de los elementos del formulario */
+.formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor-input {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+/* Estilo de los inputs y botones */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+.button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    box-sizing: border-box; /* Para que el padding no aumente el ancho */
+}
+
+.button {
+    background-color: #9e9fd4; /* Color del botón, verde en este caso */
+    color: black;
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: #7172c0; /* Color al pasar el mouse */
+}
+
+/* Estilo para la etiqueta y campos requeridos */
+label {
+    margin-bottom: 5px;
+    display: block;
+}
+
+.req {
+    color: red;
+}
+
+#title{
+    color: var(--negro);
+}

@@ -1,0 +1,87 @@
+/* Estilos generales para la sección del perfil */
+.profile {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    border: 2px solid;
+    padding: 60px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin:60px;
+}
+
+/* Estilos para las columnas del perfil */
+.profile .user-data, .profile .profile-actions, .profile .user-cart {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px; /* Espacio entre las secciones */
+}
+
+/* Estilos para los títulos de cada sección */
+.profile h2 {
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+/* Estilos para las listas y sus elementos */
+.profile ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.profile li {
+    padding: 8px 0;
+    border-bottom: 1px solid #dddddd;
+}
+
+.profile li:last-child {
+    border-bottom: none;
+}
+
+/* Estilos para los enlaces */
+.profile a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.profile a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para elementos destacados */
+.persona {
+    color: #131212;
+    font-size: 20px;
+}
+
+#logout{
+    text-align: right; /* Alinea el contenido a la derecha */
+    padding: 10px; /* Añade un poco de espacio alrededor *//* Color de fondo, ajusta según necesidad */
+    margin: 10px;
+    font-size: 30px;
+    border: 5px;
+    
+}
+#logoutt{
+    text-align: right; /* Alinea el contenido a la derecha */
+    padding: 10px; /* Añade un poco de espacio alrededor *//* Color de fondo, ajusta según necesidad */
+    margin: 10px;
+    font-size: 30px;
+    border: 5px;
+
+}
+.logouttt{
+    color: black;
+}
+
+.profile__actions{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 0px;
+    font-size: 3rem;
+    color: var(--gris);
+    font-family: 'PT Sans', sans-serif; 
+    
+    }

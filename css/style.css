@@ -1,0 +1,709 @@
+:root{
+  --secundario:  #898ac0;
+  --primarioBrillante: #a11c55;
+  --primario: #68002d;
+  --primarioviolet: #d9b2c5;
+  --primarioOscuro: #7a1a43ad;
+  --blancore:#f6f6f6;
+  --blanco: #fff;
+  --gris: #808080;
+  --tercero:#C62626;
+  --fuenteprincipal: font-family: 'Lisu Bosa', serif;
+  --fuenteSecundaria:font-family: 'PT Sans', sans-serif; 
+  --fuenteSensual:font-family: 'Dancing Script', cursive; font-family: 'Dancing Script', cursive;
+}
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+}
+  /* /globales/ */
+body{
+  background-color:  var(--primario);
+  font-size: 1.6rem;
+  line-height: 1.5;
+  margin: 0;
+   padding: 0;
+}
+ p{
+  font-size: 1.8rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--blanco);
+}
+a{
+  text-decoration: none;
+  font-family: var(--fuenteSensual);
+ }
+img{
+ max-width:100%;
+}
+
+h1, h2, h3,h4{
+  text-align: center;
+  color: var(--blanco);
+  font-family: var(--fuentePrincipal);
+      }
+h1{
+ font-size: 4rem;
+ }
+h2{
+font-size: 3.2rem;
+ }
+ h3{
+  font-size: 2.4rem;
+ }
+ h4{
+  font-size: 3.2rem;
+ }
+ @media (min-width: 768px) {
+  .header{
+    display: flex;
+    
+    
+  /*para centrar**/
+  
+ }
+  .header__logo{
+    background-color: var(--primario);
+    width: 12rem;
+    height: 12rem;
+     justify-content: space-between;
+    margin: 0;
+    padding: 0;
+  }
+ .navegacion{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--blanco);
+   padding: 0 20px;
+    gap: 2rem; 
+    /* /reparar elementos en 2rem/ */
+   /* justify-content: right; */
+   justify-content: space-between;
+   height: 12rem;
+   width: 100%;
+    }
+    @media (min-width:768px){
+     .navegacion{
+         flex-direction: row;
+         justify-content: space-around;
+     }
+ }
+ .navegacion__ul {
+   color: var(--secundario);
+   text-decoration: none;
+   font-family:var(--fuenteSensual);
+   font-weight: 100;
+   padding: 1rem;
+   align-items: center;
+   
+ 
+   
+ }
+ .navegacion__ul:hover{
+   background-color: var(--tercero);
+   padding: 1rem;
+ 
+ }
+     
+  .navegacion__ul{
+     list-style: none;
+     font-family: 'Dancing Script', cursive;
+     display: flex;
+     gap: 1rem;
+     justify-content: space-between;
+     align-items: center;
+      color: var(--secundario);
+     font-size: 3rem;
+     
+  } 
+  .navegacion_corazon{
+   list-style: none;
+   display: flex;
+   gap: 1rem;
+   color: var(--secundario);
+   justify-content: space-between;
+   align-items: center;
+  }
+ 
+  .navegacion_carrito{
+   list-style: none;
+   display: flex;
+   gap: 1rem;
+   justify-content: space-between;
+   align-items: center;
+   color:var(--secundario);
+  }
+  .perfil{
+   list-style: none;
+   display: flex;
+   gap: 1rem;
+   justify-content: space-between;
+   align-items: center;
+   color:var(--secundario);
+  }
+  .lupa{
+   align-items: center;
+   display: flex;
+  }  
+  .lupa__buscar {
+   position: relative;
+   padding: 5px;
+ }
+ .lupa__buscar input {
+   width: 0;
+   height: 40px;
+   padding: 0 20px;
+   font-size: 18px;
+   color: #222;
+   outline: none;
+   border: 1px solid silver;
+   border-radius: 30px;
+   transition: all 0.6s ease;
+ }
+ .btn {
+   width: 55px;
+   height: 55px;
+   line-height: 55px;
+   top: 0;
+   right: 0;
+   position: absolute;
+   background: var(--tercero);
+   text-align: center;
+   color: white;
+   font-size: 18px;
+   border-radius: 50%;
+   cursor: pointer;
+ }
+ .lupa__buscar:hover input {
+   width: 240px;
+ }
+ 
+ .lupa__buscar input:focus {
+   width: 240px;
+ }
+     
+ }
+
+
+
+/*imagenes**/
+@media (min-width: 768px) {
+  .section {
+    display: flex;
+    max-width: 100%; /* Utiliza max-width para que el elemento no se vuelva más ancho que el viewport */
+    height: auto; /* Cambia height a auto para que se ajuste al contenido */
+    margin: 0 auto;
+    justify-content: center;
+  }
+
+  .section_imagen {
+    width: 0;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: 0.8;
+    transition: 0.5s ease;
+  }
+
+  .section_imagen:hover {
+    cursor: crosshair;
+    width: 300px; /* Cambia width a 100% para que ocupe todo el espacio disponible */
+    opacity: 1;
+    filter: contrast(120%);
+  }
+}
+
+
+.boton{
+  padding: 1rem 3rem;
+  margin-bottom: 1rem;
+    width: 1%;
+    vertical-align: middle;
+    white-space: nowrap;
+    position: relative;
+  }
+
+/*boton */
+
+.boton:hover{
+  cursor: pointer;
+}
+.boton--primario{
+  background-color: var(--gris);
+  display: inline-block;
+}
+.boton--secundario{
+  background-color: var(--secundario);
+}
+.curso{
+  list-style: none;
+}
+.widget-curso_label{
+  font-family: var(--funetedelHeading);
+  font-weight: 700;
+
+}
+.widget-curso_informacion{
+  font-weight: 700;
+
+}
+.widget-curso :last-of-type{
+  border: none;
+  margin-bottom: 0;
+}
+.widget-curso{
+  border-bottom: 1px solid var(--grisClaro);
+  margin-bottom: 2rem;
+}
+.widget-curso_label,
+.widget-curso_informacion{
+  font-size: 2rem;
+}
+  /* registro*/
+  .registro {
+    background-color: #F5F5F5;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #DDDDDD;
+  }
+  
+  .registro {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centro verticalmente el contenido */
+    width: 100%;
+    text-align: center;
+    -webkit-box-shadow: 9px 12px 42px 0px rgba(245,0,225,1);
+-moz-box-shadow: 9px 12px 42px 0px rgba(245,0,225,1);
+box-shadow: 9px 12px 42px 0px rgba(245,0,225,1);
+background-color: #e63e3e;
+  }
+  
+  .registro__label {
+    margin-bottom: 10px;
+    font-family:'PT Sans', sans-serif; 
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  
+  
+  /* CATEGORIAS */
+  .categorias {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    /* background-image:  */
+  }
+  
+  .categorias .categoria {
+    padding: 10px 20px;
+    background-color: #ccc;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    margin: 0 10px;
+  }
+  
+  .categorias .categoria:hover {
+    background-color: #aaa;
+  }
+  
+  .categorias .categoria:focus {
+    outline: none;
+  }
+  
+  .categorias .categoria:not(:first-child) {
+    margin-left: 25px;
+  }
+  
+  .categorias .categoria-content {
+    display: none;
+    margin-top: 2rem;
+  }
+  
+  .categorias .categoria-content.active {
+    display: block;
+  }
+  /*IMAGENES DE PRODUCTOS CATEGORIAS**/
+.imagen {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual tamaño */
+  grid-auto-rows: minmax(100px, auto); /* Altura mínima de 100px y ajuste automático */
+  grid-gap: 10px; /* Espacio entre las celdas */
+  justify-content: center;
+  justify-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.imagen__img{
+    max-width: 100%;
+    height: 25rem;
+    padding: 2.5rem;
+    margin: 0 auto;
+    /*display: block;**/
+    /*margin: 0 auto;**/
+}
+
+   /*PRODUCTOS*/
+   
+   .producto{
+    background-color: var(--primarioOscuro);
+    padding: 1rem;
+
+
+  }
+  .producto__nombre{
+    color: var(--primarioviolet);
+  }
+  .producto_precio{
+    font-size: 2.8rem;
+    color: var(--secundario);
+
+  }
+  .producto_precio{
+    font-family: var(--fuentePrincipal);
+    margin: 1rem 0;
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  .contenido {
+    display: none;
+    text-align: left;
+    padding-left: 4rem;
+    font-size: 3rem;
+    color: var(--fuenteSecundaria);
+  }
+  /*PRODUCTOS*/
+  
+  
+
+/* NOVEDADES */
+.novedadesP {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual tamaño */
+  grid-auto-rows: minmax(100px, auto); /* Altura mínima de 100px y ajuste automático */
+  grid-gap: 10px; /* Espacio entre las celdas */
+  justify-content: center;
+  justify-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* TITULO GENERAL */
+.titulo {
+  text-align: center;
+  font-size: 4.5rem; /* Ajusta el tamaño de fuente según tus necesidades */
+  font-family: var(--fuenteprincipal);
+  padding: 1rem;
+  margin-top: .5rem;
+}
+
+
+
+
+/* EDUCACIÓN SEXUAL */
+@media (min-width: 768px) {
+  .contenido-principal{
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      column-gap: 4rem;
+      background-image: url(../img/sexual-education-concept-tiny-people-with-big-book-in-sexual-health-lesson-contraception-and-reproduction-system-human-sexuality-modern-flat-cartoon-style-illustration-vector.jpg);
+      background-position-x:center;
+      background-size: cover;    
+      height: 1000px;
+      padding: 20px;
+      position: relative;
+      margin-bottom: 2rem;
+  }
+}
+/* Ajusta el alto y ancho de la imagen para que sea más visible */
+.entrada_imagen {
+width: 270px; /* Ancho deseado */
+height: auto; /* Mantén la proporción de aspecto original */
+margin-right: 2rem; /* Espacio entre la imagen y el texto */
+float: left; /* Coloca la imagen a la izquierda */
+}
+
+/* Aplica estilos al texto */
+.entrada_texto {
+font-family: 'Poppins', sans-serif;
+}
+
+/* Ajusta la disposición del contenido */
+.entrada_contenido {
+font-family: 'Poppins', sans-serif;
+overflow: hidden; /* Evita que el texto flote alrededor de la imagen */
+}
+
+/* Estilos para el botón */
+/* Estilos para el botón */
+.boton--primario {
+display: inline-block; /* Cambia a "inline-block" para ajustar el tamaño al contenido */
+padding: 0.5rem 1rem; /* Ajusta el espaciado interno del botón según tus preferencias */
+font-size: 1.6rem; /* Ajusta el tamaño de fuente del botón según tus preferencias */
+background-color: var(--tercero); /* Cambia el fondo del botón si es necesario */
+color: var(--blanco); /* Cambia el color del texto del botón si es necesario */
+text-align: center; /* Centra el texto horizontalmente en el botón */
+text-decoration: none; /* Elimina la subraya en el enlace */
+margin-top: 1rem; /* Añade un espacio entre el texto y el botón */
+clear: both; /* Limpia los flotadores anteriores */
+}
+
+
+.educacion
+{
+  display: flex;
+  flex-direction: column;
+  font-family:'Times New Roman', Times, serif;
+  position: absolute;
+
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: rgba(0,0,0, .5 ); /* transparencia**/
+  background-color:  rgb(0 0 0 /70%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;/** centrar**/
+  
+}
+
+.educacion {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.educacion__tips {
+  margin: 2rem;
+  font-size: 2.5rem;
+  display: flex;
+  margin-bottom: 1rem;
+  font-family: var(--fuenteSecundaria);
+}
+
+.entrada{
+  border-bottom: 1px solid var(--gris);
+  margin-bottom: 2rem;
+}
+.entrada:last-of-type{
+  border: none;
+  margin-bottom: 0;
+}
+
+/* pagina de educacion a la adiccion*/
+@media (min-width:768px ) {
+  .page2{
+      display: grid;
+      grid-template-columns: 50% 50%;
+      padding: 2rem;
+      column-gap: 1rem;
+
+      
+
+  }
+  .pageSection2{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 2rem;
+    column-gap: 1rem;
+  }
+  
+}
+
+/* Estilos para .page20 en pantallas grandes (mínimo 768px) */
+@media (min-width: 768px) {
+  .page20 {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--primarioBrillante); /* Cambia el color de fondo a tu preferencia */
+    padding: 1rem; /* Agrega un espacio alrededor del contenido */
+    border: 1px solid #ccc; /* Agrega un borde para que parezca un cuadro */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Agrega sombra al cuadro */
+  }
+}
+
+/* Estilos generales para .page20 */
+.page20 {
+  flex: 0 0 calc(50% - 1rem);
+}
+
+
+
+  /* FORMULARIO CONTACTO*/
+  .formulario{
+    background-color: var(--gris);
+    width: min(60rem , 100%);  /*Utiliza el valor más pequeño**/
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+    }
+    
+    .formulario fieldset{
+        border: none;
+    }
+    
+    .formulario legend{
+        text-align: center;
+        font-size: 2.2rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 2rem;
+        color: var(--amarillo);
+    }
+    
+    @media (min-width: 768px) {
+        .contenedor-campos{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto 20rem;
+            column-gap: 1rem;
+        }
+        .campo:nth-child(3),
+        .campo:nth-child(4) {
+            grid-column: 1 / 3;
+            
+        }
+    }
+    
+    .campo{
+        margin-bottom: 1rem;
+    }
+    
+    .campo label{
+        color: var(--negro);
+        font-weight: bold;
+        font-size: 3rem;
+        margin-bottom: .5rem;
+        display: block;
+    }
+    
+    .campo textarea {
+        height: 20rem;
+    }
+    
+    .input-text {
+        width: 100%;
+        border: none;
+        padding: 1.5rem;
+        border-radius: .5rem;
+    }
+
+    .w-sm-100 {
+      width: 100%;
+  }
+  
+  @media (min-width: 768px) {
+      .w-sm-100 {
+          width: auto;
+      }
+  }
+
+    .flex {
+      display: flex;
+  }
+
+    .alinear-derecha {
+      justify-content: flex-end;
+  }
+
+  /* FOOTER */
+  .footer {
+    text-align: center;
+}
+
+
+/* Estilos para la entrada de educación */
+/* Estilos para la entrada de educación */
+.contenedor {
+  overflow: hidden; /* Evita que los elementos desborden el contenedor */
+}
+
+/* Estilos para la primera sección de blog */
+.blog1 {
+  float: left; /* Coloca .blog1 a la izquierda */
+  margin-right: 10px; /* Espacio entre .blog1 y .bienestar */
+  width: 50%; /* Ocupa el 50% del ancho disponible */
+  
+}
+
+/* Estilos para la sección de bienestar */
+.bienestar {
+  float: left; /* Coloca .bienestar a la izquierda al lado de .blog1 */
+  width: 50%; /* Ocupa el 50% del ancho disponible */
+}
+
+/* Estilos para la segunda sección de blog (a partir de 768px de ancho) */
+@media (min-width: 768px) {
+  .blog2 {
+    clear: both; /* Asegura que .blog2 quede debajo de .blog1 y .bienestar */
+    padding: 2rem;
+  }
+
+  /* Estilos para la imagen en la segunda sección */
+  @media (min-width:768px ) {
+    .img2{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        padding: 2rem;
+        column-gap: 1rem;
+        background-color:var(--secundario); /* Cambia el color de fondo a tu preferencia */
+        border: 1px solid #ccc; /* Agrega un borde para que parezca un cuadro */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Agrega sombra al cuadro */
+        
+        
+
+    }
+    
+}
+
+}
+@media (min-width: 768px) {
+  .blog3{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 2rem;
+      margin: 10px;
+      background-color:var(--primarioBrillante); /* Cambia el color de fondo a tu preferencia */
+    border: 1px solid #ccc; /* Agrega un borde para que parezca un cuadro */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Agrega sombra al cuadro */
+  }
+}
+.youtube{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.img4{
+  display: flex;
+  flex-direction: row;
+  margin: 1;
+  align-items: end;
+  width: 50%;
+}
+@media (min-width: 768px) {
+  .page3{
+      display: grid;
+      grid-template-areas: "izquierda contenido derecha";
+      grid-template-columns: 1fr 3fr 1fr;
+      grid-auto-flow: column;
+      column-gap: 2rem;
+  }
+}
+.contenido-principal{
+  grid-area: contenido;
+}
+.sidebar-1{
+  grid-area: izquierda;
+}
+
+/* perfil*/
+
+a{
+  color: var(--secundario);
+}

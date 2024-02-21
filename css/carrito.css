@@ -1,0 +1,12 @@
+/* GLOBALES */
+
+
+.carrito {
+    font-family: Arial, sans-serif;
+    background-color: #d628a5e9;
+    border: 2px solid;
+    padding: 60px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin:60px;
+}
